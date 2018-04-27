@@ -1,2 +1,9 @@
+com/lmig/fusion/hack/controller/AgentController.class
 com/lmig/fusion/hack/controller/HelloController.class
+com/lmig/fusion/hack/model/Agent$AgentBuilder.class
+com/lmig/fusion/hack/model/State.class
+com/lmig/fusion/hack/model/ClassCode.class
 com/lmig/fusion/hack/Application.class
+com/lmig/fusion/hack/model/Agent.class
+com/lmig/fusion/hack/model/ClassCode$ClassCodeBuilder.class
+com/lmig/fusion/hack/model/State$StateBuilder.class
