@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.server.PathParam;
@@ -25,7 +26,7 @@ public class AgentController {
 
     @CrossOrigin
     @GetMapping("/agent/{NIPRId}")
-    public ResponseEntity<Agent> getAgent(@PathParam("NIPRId") String niprId) {
+    public ResponseEntity<Agent> getAgent(@PathVariable("NIPRId") String niprId) {
 
         Agent agent = Agent.builder().niprId(niprId).states(
                 Arrays.asList(State.builder().name("IN").amount(3).build(), State.builder().name("MA").amount(8).build()))
