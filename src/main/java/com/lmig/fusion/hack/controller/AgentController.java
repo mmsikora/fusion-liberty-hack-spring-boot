@@ -27,7 +27,7 @@ public class AgentController {
     @GetMapping("/agent/{NIPRId}")
     public ResponseEntity<Agent> getAgent(@PathParam("NIPRId") String niprId) {
 
-        Agent agent = Agent.builder().niprId("16158086").states(
+        Agent agent = Agent.builder().niprId(niprId).states(
                 Arrays.asList(State.builder().name("IN").amount(3).build(), State.builder().name("MA").amount(8).build()))
                 .classCodes(Arrays.asList(ClassCode.builder().classCd("23232").classCdDesc("Beautician - independent operator").amount(3).build(),
                         ClassCode.builder().classCd("89999").classCdDesc("Countertop installation - ceramic, stone, laminate, etc. Also contemplates file flooring").amount(3).build()))
