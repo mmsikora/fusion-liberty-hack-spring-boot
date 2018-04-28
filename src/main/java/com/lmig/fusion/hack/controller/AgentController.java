@@ -5,6 +5,7 @@ import com.lmig.fusion.hack.model.ClassCode;
 import com.lmig.fusion.hack.model.State;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,12 +16,14 @@ import java.util.List;
 @RestController
 public class AgentController {
 
+    @CrossOrigin
     @GetMapping("/agents")
     public ResponseEntity<List<String>> getAgents() {
         List<String> agents = Arrays.asList("16158086", "16158034", "2232345", "2332345", "7232345", "9232345", "2232345", "1232345");
         return new ResponseEntity<>(agents, HttpStatus.OK);
     }
 
+    @CrossOrigin
     @GetMapping("/agent/{NIPRId}")
     public ResponseEntity<Agent> getAgent(@PathParam("NIPRId") String niprId) {
 
